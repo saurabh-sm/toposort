@@ -35,7 +35,7 @@ Fortunately, the longest path in a DAG does have optimal substructure, which all
 
 # Expected Output
 
-The output should display the list of nodes in topological sorting, separated by whitespace (space, tab, new line, etc.) followed by a new line, then followed by the length of the longest path and a longest path.
+The output displays the list of nodes in topological sorting, separated by whitespace (space, tab, new line, etc.) followed by a new line, then followed by the length of the longest path and a longest path.
 
 For example, for the graph in the second figure, the output will be:
 
