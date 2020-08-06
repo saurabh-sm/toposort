@@ -33,7 +33,7 @@ For example in the below figure, there are 2​ different paths from vertex `1` 
 
 Fortunately, the longest path in a DAG does have optimal substructure, which allows us to solve it using dynamic programming. 
 
-# Expected Output
+# Output
 
 The output displays the list of nodes in topological sorting, separated by whitespace (space, tab, new line, etc.) followed by a new line, then followed by the length of the longest path and a longest path.
 
