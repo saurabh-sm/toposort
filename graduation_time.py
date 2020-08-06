@@ -15,6 +15,7 @@ def parse_files():
         graphs.append(graph_content)
     return graphs
 
+
 def create_graph(graph_content):
     """
     Read each line from the file into a list. First line in the file contains
@@ -36,6 +37,7 @@ def create_graph(graph_content):
 
     return graph_dict, split_edges
 
+
 def topological_sort(graph, start):
     """
     Implementation of DFS topological sort
@@ -53,6 +55,7 @@ def topological_sort(graph, start):
             stack.append(v)
     return stack + order[::-1]
 
+
 def DFS(G,v,seen=None,path=None):
     if seen is None: seen = []
     if path is None: path = [v]
@@ -64,6 +67,7 @@ def DFS(G,v,seen=None,path=None):
             paths.append(tuple(t_path))
             paths.extend(DFS(G, traverse, seen[:], t_path))
     return paths
+
 
 def longest_path(edges):
     # Define graph by edges, and build graph dictionary
@@ -85,6 +89,7 @@ def longest_path(edges):
     print(max_len)
     print("Longest Paths:")
     for path in max_paths: print(path)
+
 
 def main():
     graph1, graph2, graph3 = parse_files()
