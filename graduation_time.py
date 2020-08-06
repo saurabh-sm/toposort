@@ -57,6 +57,9 @@ def topological_sort(graph, start):
 
 
 def DFS(G,v,seen=None,path=None):
+    """
+    Path trace in graph 'G', starting from vertex 'v'
+    """
     if seen is None: seen = []
     if path is None: path = [v]
     seen.append(v)
@@ -85,10 +88,12 @@ def longest_path(edges):
     max_len   = max(len(path) for path in all_paths)
     max_paths = [path for path in all_paths if len(path) == max_len]
 
-    print("Length of the longest path:")
+    print("\nLength of the longest path:")
     print(max_len)
-    print("Longest Paths:")
-    for path in max_paths: print(path)
+
+    print("\nLongest Paths:")
+    for path in max_paths:
+        print(path)
 
 
 def main():
@@ -97,11 +102,12 @@ def main():
     starting_index = '2'
     print("Created graph: ")
     print(created_graph)
-    print("Edge pairs: ")
+    print("\nEdge pairs: ")
     print(edge_pairs)
     print("\nTopological sorting:")
     print(topological_sort(created_graph, starting_index))
     longest_path(edge_pairs)
+
 
 if __name__ == '__main__':
     main()
