@@ -79,14 +79,16 @@ def longest_path(edges):
         G[s].append(t)
         G[t].append(s)
 
+    vertex_longest = DFS(G, '1')     # compute longest path from vertex 'v'
+
     # compute longest path between any two points
-    all_paths = []
+    all_longest = []
     for node in set(G.keys()):
         for path in DFS(G, node):
-            all_paths.append(path)
+            all_longest.append(path)
 
-    max_len   = max(len(path) for path in all_paths)
-    max_paths = [path for path in all_paths if len(path) == max_len]
+    max_len   = max(len(path) for path in vertex_longest)
+    max_paths = [path for path in vertex_longest if len(path) == max_len]
 
     print("\nLength of the longest path:")
     print(max_len)
